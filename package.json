@@ -1,0 +1,62 @@
+{
+	"name": "@affeldt28/n8n-nodes-tdsynnex",
+	"version": "0.0.1",
+	"description": "n8n node for TD Synnex",
+	"license": "MIT",
+	"homepage": "https://github.com/affeldt28/n8n-nodes-tdsynnex",
+	"keywords": [
+		"n8n-community-node-package",
+		"td-synnex",
+		"td-synnex-ion",
+		"stream-one",
+		"stream-one-ion",
+		"cloud",
+		"cloud-marketplace",
+		"subscriptions",
+		"reseller"
+	],
+	"author": {
+		"name": "affeldt28",
+		"email": "code@affeldt.dev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/affeldt28/n8n-nodes-tdsynnex.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"format": "biome format --write ",
+		"lint": "biome check",
+		"lint:fix": "biome check --write",
+		"n8n-lint": "n8n-node lint",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"..."
+		],
+		"nodes": [
+			"..."
+		]
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.13",
+		"@n8n/node-cli": "0.47.2",
+		"release-it": "21.0.2",
+		"typescript": "6.0.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
