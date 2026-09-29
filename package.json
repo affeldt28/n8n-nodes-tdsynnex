@@ -1,7 +1,7 @@
 {
 	"name": "@affeldt28/n8n-nodes-tdsynnex",
-	"version": "0.0.1",
-	"description": "n8n node for TD Synnex",
+	"version": "1.0.0",
+	"description": "n8n nodes for TD SYNNEX services",
 	"license": "MIT",
 	"homepage": "https://github.com/affeldt28/n8n-nodes-tdsynnex",
 	"keywords": [
@@ -32,7 +32,8 @@
 		"lint:fix": "biome check --write",
 		"n8n-lint": "n8n-node lint",
 		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease"
+		"prepublishOnly": "n8n-node prerelease",
+		"typecheck": "tsc --noEmit"
 	},
 	"files": [
 		"dist"
@@ -41,10 +42,10 @@
 		"n8nNodesApiVersion": 1,
 		"strict": true,
 		"credentials": [
-			"..."
+			"dist/credentials/TdSynnexIonApi.credentials.js"
 		],
 		"nodes": [
-			"..."
+			"dist/nodes/TdSynnexIon/TdSynnexIon.node.js"
 		]
 	},
 	"publishConfig": {

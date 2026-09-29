@@ -1,0 +1,28 @@
+{
+	"node": "@affeldt28/n8n-nodes-tdsynnex.tdSynnexIon",
+	"nodeVersion": "3.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Finance & Accounting",
+		"Productivity",
+		"Sales"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://www.tdsynnex.com/ion/docs/#authentication"
+			},
+			{
+				"url": "https://www.tdsynnex.com/ion/v3api/#section/Authentication"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://www.tdsynnex.com/ion/docs/#introduction"
+			},
+			{
+				"url": "https://www.tdsynnex.com/ion/v3api/"
+			}
+		]
+	}
+}
