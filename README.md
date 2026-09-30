@@ -2,7 +2,7 @@
 
 This is an n8n community node package for TD SYNNEX services.
 
-It lets you use TD SYNNEX APIs in your n8n workflows, starting with customer listing in StreamOne ION. Additional TD SYNNEX services can be added as separate nodes within this package.
+It lets you use TD SYNNEX APIs in your n8n workflows, including customer management in StreamOne ION. Additional TD SYNNEX services can be added as separate nodes within this package.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
@@ -25,9 +25,14 @@ The **TD SYNNEX ION** node currently supports the following resources and operat
 
 ### Customer
 
-| Operation      | API                                                                                               | Implemented |
-| -------------- | ------------------------------------------------------------------------------------------------- | ----------- |
-| List customers | [GET /api/v3/accounts/{accountId}/customers](https://www.tdsynnex.com/ion/v3api/)                     | ✅          |
+| Operation                  | API                                                                                                          | Implemented |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------- |
+| List customers             | [GET /api/v3/accounts/{accountId}/customers](https://www.tdsynnex.com/ion/v3api/)                            | ✅           |
+| Create customer            | [POST /api/v3/accounts/{accountId}/customers](https://www.tdsynnex.com/ion/v3api/)                           | ✅           |
+| Get customer               | [GET /api/v3/accounts/{accountId}/customers/{customerId}](https://www.tdsynnex.com/ion/v3api/)               | ✅           |
+| Update customer            | [PUT /api/v3/accounts/{accountId}/customers/{customerId}](https://www.tdsynnex.com/ion/v3api/)               | ✅           |
+| Get cloud profiles         | [GET /api/v3/accounts/{accountId}/customers/{customerId}/cloudProfiles](https://www.tdsynnex.com/ion/v3api/) | ✅           |
+| Get cloud profile (legacy) | [GET /api/v3/accounts/{accountId}/customers/{customerId}/cloudProfile](https://www.tdsynnex.com/ion/v3api/)  | ✅           |
 
 ## Credentials
 
@@ -59,13 +64,11 @@ No specific minimum n8n version is pinned in this package yet.
 
 1. Add the **TD SYNNEX ION** node to your workflow.
 2. Select your **TD SYNNEX ION API** credential.
-3. Set **Resource** to **Customer**.s
+3. Set **Resource** to **Customer**.
 4. Set **Operation** to **Get Many**.
-5. Set **Page Size** to the requested number of customers. The default is `50`.
+5. Under **Additional Fields**, set **Page Size** to the desired number of customers.
 6. Leave **Page Token** empty for the first page, or enter the continuation token from a previous response.
 7. Execute the node to retrieve customers and use the response in subsequent workflow steps.
-
-Each execution requests one page and returns the API response. Automatic pagination is not implemented.
 
 ## Resources
 
