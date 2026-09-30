@@ -14,9 +14,9 @@ export const pageQueryParameters: INodeProperties[] = [
 	{
 		displayName: 'Page Token',
 		name: 'pageToken',
-		// Pagination cursors are not authentication secrets.
-		// eslint-disable-next-line n8n-nodes-base/node-param-type-options-password-missing
 		type: 'string',
+		// Pagination cursors are not authentication secrets.
+		typeOptions: { password: false },
 		default: '',
 		description: 'Token from a previous response. Leave empty to request the first page.',
 		routing: { send: { type: 'query', property: 'pageToken' } },
