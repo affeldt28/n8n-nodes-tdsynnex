@@ -12,13 +12,12 @@ export const pageQueryParameters: INodeProperties[] = [
 		routing: { send: { type: 'query', property: 'pageSize' } },
 	},
 	{
-		displayName: 'Page Token',
-		name: 'pageToken',
+		displayName: 'Page Cursor',
+		name: 'pageCursor',
 		type: 'string',
-		// Pagination cursors are not authentication secrets.
-		typeOptions: { password: false },
 		default: '',
-		description: 'Token from a previous response. Leave empty to request the first page.',
+		description:
+			"Cursor from the previous response's nextPageToken. Leave empty to request the first page.",
 		routing: { send: { type: 'query', property: 'pageToken' } },
 	},
 ];
