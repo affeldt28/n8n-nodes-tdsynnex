@@ -4,7 +4,10 @@ import { customerBodyProperties, customerIdProperty } from './shared.properties'
 const properties: INodeProperties[] = [customerIdProperty, ...customerBodyProperties];
 
 const displayOptions: IDisplayOptions = {
-	show: { resource: ['customer'], operation: ['update'] },
+	show: {
+		resource: ['customer'],
+		operation: ['update'],
+	},
 };
 
 export const description = updateDisplayOptions(displayOptions, properties);

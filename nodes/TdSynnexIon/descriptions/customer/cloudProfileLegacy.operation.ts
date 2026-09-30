@@ -22,7 +22,10 @@ const properties: INodeProperties[] = [
 ];
 
 const displayOptions: IDisplayOptions = {
-	show: { resource: ['customer'], operation: ['getCloudProfile'] },
+	show: {
+		resource: ['customer'],
+		operation: ['getCloudProfile'],
+	},
 };
 
 export const description = updateDisplayOptions(displayOptions, properties);
