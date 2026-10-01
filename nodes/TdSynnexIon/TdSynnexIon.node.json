@@ -1,6 +1,6 @@
 {
 	"node": "@affeldt28/n8n-nodes-tdsynnex.tdSynnexIon",
-	"nodeVersion": "3.0",
+	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [
 		"Finance & Accounting",
